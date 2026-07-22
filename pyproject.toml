@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dqimeter"
+version = "0.1.0"
+authors = [
+  { name="Shyamal Parikh", email="parikhshyamal1993@gmail.com" },
+]
+description = "A production-grade Document Quality Index (DQI) that acts as the first line of defense in any document processing pipeline."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "onnxruntime",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/parikhshyamal1993/dqimeter"
+"Bug Tracker" = "https://github.com/parikhshyamal1993/dqimeter/issues"
+
+[tool.setuptools]
+packages = ["dqimeter", "dqimeter.resources"]
+
+[tool.setuptools.package-data]
+"dqimeter.resources" = ["*.onnx"]
